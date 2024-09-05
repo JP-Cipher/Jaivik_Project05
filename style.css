@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #e0e0e0;  /* Less bright white text */
+    --secondary-color: #1c1c1c;  /* Dark background */
+    --button-color: #333333;  /* Dark color for buttons */
+    --button-hover-color: #555555;  /* Slightly lighter on hover */
+}
+
+body {
+    background-color: var(--secondary-color);
+    font-family: 'Montserrat', sans-serif; /* Updated font to Montserrat */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .number {
+    font-size: 160px;
+    font-weight: 500;
+    margin: 0 20px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 15px;
+    border-radius: 30px; /* Curvy border radius */
+    /* Removed border */
+}
+
+.container .number span {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.container .number span + span {
+    font-size: 20px;
+    margin-left: 8px;
+    align-self: flex-end;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+.container1 {
+    margin: 20px;
+}
+
+.container1 button {
+    color: var(--primary-color);
+    background-color: var(--button-color);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* Curvier buttons */
+    margin: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container1 button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#lapsContainer {
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+    .container .number {
+        font-size: 120px;
+    }
+
+    .container .number span {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .number {
+        margin: 10px;
+        font-size: 100px;
+    }
+
+    .container .number span {
+        font-size: 35px;
+    }
+
+    .container1 button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
